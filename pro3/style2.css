@@ -1,0 +1,30 @@
+.movies{
+
+margin-top:40px ;
+margin-left:40px;
+}
+.movie1,.movie2,.movie3,.movie4,.movie5{
+    margin-right:40px;
+}
+
+.movie1:hover {
+  color: #d6ff08;
+}
+.movie2:hover {
+  color: #c6b608;
+}
+.movie3:hover {
+  color:darkgray;
+}
+.movie4:hover {
+  color:rgb(41, 41, 236);
+}
+.movie5:hover {
+  color:rgb(232, 97, 24);
+  
+}
+
+.movie22{
+  color: #d6ff08;
+  
+}
