@@ -1,42 +1,35 @@
-.movies{
+.movie-card{
+  width: 220px;
+  font-family:'Segoe UI', sans-serif;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   margin: 3rem;
+   text-decoration:none;
+   color:inherit;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+ display: inline-block;
 
-margin-top:40px ;
-margin-left:40px;
 }
-.movie1,.movie2,.movie3,.movie4,.movie5,.movie6,.movie7,.movie8{
-    margin-right:40px;
-}
+.incinemas{
 
-.movie1:hover {
-  color: #d6ff08;
-}
-.movie2:hover {
-  color: #c6b608;
-}
-.movie3:hover {
-  color:darkgray;
-}
-.movie4:hover {
-  color:rgb(41, 41, 236);
-}
-.movie5:hover {
-  color:rgb(232, 97, 24);
-  
-}
-.movie6:hover {
-  color:rgb(78, 74, 72);
-  
-}
-.movie7:hover {
-  color:rgb(248, 22, 22);
-  
-}
-.movie8:hover {
-  color:rgb(85, 205, 10);
-  
-}
+background-color:black;
+color:white;
+padding:0.1rem;
+display:flex;
+align-items:center;
+text-align: center;
 
-.movie22{
-  color: #d6ff08;
-  
+
+
+}
+.movie-poster{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.details{
+  margin-bottom:400px;
+  margin-left:300px;
 }
