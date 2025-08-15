@@ -17,7 +17,7 @@ color: #f0f0f0;
 /* Navbar */
 .navbar {
   width: 100%;
-  max-width: 1200px;
+  
   background: #1f1f1f;
   padding: 15px 30px;
   display: flex;
@@ -205,4 +205,14 @@ input::placeholder, textarea::placeholder {
 }
 .movie{
 text-align:left;
+}
+
+.movie3{
+ 
+  margin-top:33px;
+
+}
+
+.movie6{
+  margin-top:40px;
 }
