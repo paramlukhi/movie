@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Booking - Mahavatar Narsimha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #fff;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .dates {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .date-box {
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      width: 60px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .date-box.active {
+      background: #e74c3c;
+      color: white;
+      font-weight: bold;
+    }
+    .cinema {
+      background: #fff;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .cinema h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .showtimes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .time {
+      padding: 8px 15px;
+      border: 1px solid #2ecc71;
+      border-radius: 6px;
+      color: #2ecc71;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .time.fast-filling {
+      border-color: orange;
+      color: orange;
+    }
+    .time.booked {
+      background: #ddd;
+      color: #555;
+      cursor: not-allowed;
+    }
+    .link{
+        text-decoration: none;
+        color:#2ecc71;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mahavatar Narsimha (Hindi)</h1>
+    <p>Movie runtime: 2h 11m | UA13+ | Action | Animation | Drama | Mythological</p>
+  </header>
+
+  <!-- Dates -->
+  <div class="dates">
+    <div class="date-box active">17<br>AUG</div>
+    <div class="date-box">18<br>AUG</div>
+    <div class="date-box">19<br>AUG</div>
+    <div class="date-box">20<br>AUG</div>
+    <div class="date-box">21<br>AUG</div>
+    <div class="date-box">22<br>AUG</div>
+  </div>
+
+  <!-- Cinemas -->
+  <div class="cinema">
+    <h2>Rajhans Cinemas: Rajhans Precia, Surat</h2>
+    <div class="showtimes">
+      <div class="time">
+        <a href="seatselection.html" class="link">
+        10:00 AM
+           </a>    
+    </div>
+        
+     <div class="time">
+        <a href="seatselection.html" class="link">
+        10:30 AM
+           </a>    
+    </div>
+
+     <div class="time">
+        <a href="seatselection.html" class="link">
+        12:45 AM
+           </a>    
+    </div>
+        
+         <div class="time">
+        <a href="seatselection.html" class="link">
+        03:30 PM
+           </a>    
+    </div>
+     <div class="time">
+        <a href="seatselection.html" class="link">
+        6:15 PM
+           </a>    
+    </div>
+        
+     <div class="time">
+        <a href="seatselection.html" class="link">
+        09:00 PM
+           </a>    
+    </div>
+        
+        
+     
+    </div>
+  </div>
+
+  <div class="cinema">
+    <h2>Rajhans Cinemas: Rajhans Flamingo, Katargam</h2>
+    <div class="showtimes">
+      <div class="time">09:00 AM</div>
+      <div class="time">10:45 AM</div>
+      <div class="time">11:30 AM</div>
+      <div class="time">02:15 PM</div>
+      <div class="time">04:15 PM</div>
+      <div class="time">06:50 PM</div>
+      <div class="time">07:45 PM</div>
+      <div class="time">09:30 PM</div>
+      <div class="time">10:30 PM</div>
+    </div>
+  </div>
+
+  <div class="cinema">
+    <h2>Rajhans Multiplex: Adajan, Surat</h2>
+    <div class="showtimes">
+      <div class="time">10:00 AM</div>
+      <div class="time">04:15 PM</div>
+      <div class="time">07:30 PM</div>
+    </div>
+  </div>
+
+  <div class="cinema">
+    <h2>INOX: VR Mall, Surat</h2>
+    <div class="showtimes">
+      <div class="time">09:30 AM</div>
+      <div class="time">03:10 PM</div>
+      <div class="time">08:50 PM</div>
+    </div>
+  </div>
+
+  <div class="cinema">
+    <h2>PVR: Rahul Raj, Surat</h2>
+    <div class="showtimes">
+      <div class="time">11:50 AM</div>
+      <div class="time">02:20 PM</div>
+      <div class="time">05:30 PM</div>
+      <div class="time">08:20 PM</div>
+      <div class="time">11:10 PM</div>
+    </div>
+  </div>
+
+</body>
+</html>
