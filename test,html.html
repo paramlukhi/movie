@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Seat Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #fff;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .screen {
+      width: 70%;
+      margin: 20px auto;
+      background: #ccc;
+      height: 40px;
+      border-radius: 5px;
+      line-height: 40px;
+      font-weight: bold;
+    }
+
+    .divider {
+      width: 70%;
+      margin: 25px auto;
+      border-top: 2px solid #ccc;  /* horizontal line */
+    }
+
+    .category {
+      margin: 15px 0 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0;
+    }
+
+    .row .left,
+    .row .right {
+      display: flex;
+    }
+
+    .left {
+      margin-right: 40px; /* space between left and right seats */
+    }
+
+    .seat {
+      width: 35px;
+      height: 35px;
+      margin: 5px;
+      border: 2px solid #28a745;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 32px;
+      font-size: 12px;
+    }
+
+    .seat.booked {
+      background: #ccc;
+      border: 2px solid #ccc;
+      cursor: not-allowed;
+    }
+
+    .seat.selected {
+      background: #28a745;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Movie Seat Booking</h1>
+  <div class="screen">SCREEN</div>
+
+  <!-- EXECUTIVE SECTION -->
+  <div class="category">₹240 EXECUTIVE</div>
+
+  <div class="row">
+    <div class="left">
+      <div class="seat">A1</div><div class="seat">A2</div><div class="seat">A3</div>
+      <div class="seat booked">A4</div><div class="seat">A5</div><div class="seat">A6</div>
+      <div class="seat">A7</div><div class="seat">A8</div><div class="seat">A9</div>
+      <div class="seat">A10</div><div class="seat">A11</div><div class="seat">A12</div>
+      <div class="seat">A13</div>
+    </div>
+    <div class="right">
+      <div class="seat">A14</div><div class="seat booked">A15</div>
+      <div class="seat">A16</div><div class="seat">A17</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="left">
+      <div class="seat">B1</div><div class="seat">B2</div><div class="seat booked">B3</div>
+      <div class="seat">B4</div><div class="seat">B5</div><div class="seat">B6</div>
+      <div class="seat">B7</div><div class="seat">B8</div><div class="seat">B9</div>
+      <div class="seat">B10</div><div class="seat">B11</div><div class="seat">B12</div>
+      <div class="seat">B13</div>
+    </div>
+    <div class="right">
+      <div class="seat">B14</div><div class="seat">B15</div>
+      <div class="seat booked">B16</div><div class="seat">B17</div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="left">
+    <div class="seat">C1</div><div class="seat">C2</div><div class="seat booked">C3</div>
+    <div class="seat">C4</div><div class="seat">C5</div><div class="seat">C6</div>
+    <div class="seat">C7</div><div class="seat">C8</div><div class="seat">C9</div>
+    <div class="seat">C10</div><div class="seat">C11</div><div class="seat">C12</div>
+    <div class="seat">C13</div>
+  </div>
+  <div class="right">
+    <div class="seat">C14</div><div class="seat">C15</div>
+    <div class="seat booked">C16</div><div class="seat">C17</div>
+  </div>
+</div>
+
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- ROYAL SECTION -->
+  <div class="category">₹210 ROYAL</div>
+  <div class="row">
+    <div class="left">
+      <div class="seat">K1</div><div class="seat">K2</div><div class="seat">K3</div>
+      <div class="seat">K4</div><div class="seat">K5</div><div class="seat">K6</div>
+      <div class="seat">K7</div><div class="seat">K8</div><div class="seat">K9</div>
+      <div class="seat">K10</div><div class="seat">K11</div><div class="seat">K12</div>
+      <div class="seat">K13</div>
+    </div>
+    <div class="right">
+      <div class="seat">K14</div><div class="seat">K15</div>
+      <div class="seat">K16</div><div class="seat">K17</div>
+    </div>
+  </div>
+
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- MARVEL SECTION -->
+  <div class="category">₹160 MARVEL</div>
+  <div class="row">
+    <div class="left">
+      <div class="seat">M1</div><div class="seat">M2</div><div class="seat">M3</div>
+      <div class="seat">M4</div><div class="seat">M5</div><div class="seat">M6</div>
+      <div class="seat">M7</div><div class="seat">M8</div><div class="seat">M9</div>
+      <div class="seat">M10</div><div class="seat">M11</div><div class="seat">M12</div>
+      <div class="seat">M13</div>
+    </div>
+    <div class="right">
+      <div class="seat">M14</div><div class="seat">M15</div>
+      <div class="seat">M16</div><div class="seat">M17</div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle selection when clicking on available seats
+    const seats = document.querySelectorAll('.seat:not(.booked)');
+    seats.forEach(seat => {
+      seat.addEventListener('click', () => {
+        seat.classList.toggle('selected');
+      });
+    });
+  </script>
+
+</body>
+</html>
