@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -59,7 +59,7 @@
 <form action="process_booking.php" method="POST">
 
   <div class="seat-layout">
-    <!-- Row A -->
+    // Row A 
     <input type="checkbox" id="A1" name="seats[]" value="A1" />
     <label for="A1" class="seat">A1</label>
 
@@ -84,7 +84,7 @@
     <input type="checkbox" id="A8" name="seats[]" value="A8" />
     <label for="A8" class="seat">A8</label>
 
-    <!-- Row B -->
+    //Row B 
     <input type="checkbox" id="B1" name="seats[]" value="B1" />
     <label for="B1" class="seat">B1</label>
 
@@ -109,7 +109,7 @@
     <input type="checkbox" id="B8" name="seats[]" value="B8" />
     <label for="B8" class="seat">B8</label>
 
-    <!-- Row C -->
+     Row C
     <input type="checkbox" id="C1" name="seats[]" value="C1" />
     <label for="C1" class="seat">C1</label>
 
@@ -133,7 +133,7 @@
     <input type="checkbox" id="C8" name="seats[]" value="C8" />
     <label for="C8" class="seat">C8</label>
 
-    <!-- Row D -->
+     Row D
     <input type="checkbox" id="D1" name="seats[]" value="D1" />
     <label for="D1" class="seat">D1</label>
 
@@ -158,7 +158,7 @@
     <input type="checkbox" id="D8" name="seats[]" value="D8" />
     <label for="D8" class="seat">D8</label>
 
-    <!-- Row E -->
+     Row E 
      <input type="checkbox" id="E1" name="seats[]" value="E1" />
     <label for="E1" class="seat">E1</label>
 
@@ -183,7 +183,7 @@
     <input type="checkbox" id="E8" name="seats[]" value="E8" />
     <label for="E8" class="seat">E8</label>
 
-    <!-- Row F -->
+     Row F
     <input type="checkbox" id="F1" name="seats[]" value="F1" />
     <label for="F1" class="seat">F1</label>
 
@@ -208,7 +208,7 @@
     <input type="checkbox" id="F8" name="seats[]" value="F8" />
     <label for="F8" class="seat">F8</label>
 
-    <!-- Row G -->
+     Row G 
     <input type="checkbox" id="G1" name="seats[]" value="G1" />
     <label for="G1" class="seat">G1</label>
 
@@ -232,7 +232,7 @@
     <input type="checkbox" id="G8" name="seats[]" value="G8" />
     <label for="G8" class="seat">G8</label>
 
-    <!-- Row H -->
+    Row H 
     <input type="checkbox" id="H1" name="seats[]" value="H1" />
     <label for="H1" class="seat">H1</label>
 
@@ -260,5 +260,185 @@
 
   <button type="submit" class="btn">Book Now</button>
 </form>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Seat Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .screen {
+      background: #ccc;
+      height: 30px;
+      width: 60%;
+      margin: 20px auto;
+      border-radius: 5px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      margin: 5px 0;
+    }
+    .seat {
+      width: 35px;
+      height: 35px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .seat.available {
+      background: white;
+      color: #000;
+    }
+    .seat.selected {
+      background: #4CAF50;
+      color: white;
+    }
+    .seat.sold {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+    .legend {
+      margin-top: 20px;
+    }
+    .legend span {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .legend .box {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 5px;
+      border-radius: 3px;
+      border: 1px solid #444;
+    }
+    .available-box { background: white; }
+    .selected-box { background: #4CAF50; }
+    .sold-box { background: #aaa; }
+  </style>
+</head>
+<body>
+
+  <h2>🎬 Mahavatar Narsimha (Hindi)</h2>
+  <p>Rajhans Cinemas - Surat | 17 Aug 2025 | 09:00 PM</p>
+
+
+
+  <!-- Recliner -->
+  <h3>₹490 Recliner</h3>
+  <div class="row">
+    <div class="seat available">11</div>
+    <div class="seat sold">12</div>
+    <div class="seat available">13</div>
+    <div class="seat available">14</div>
+    <div class="seat available">15</div>
+    <div class="seat available">16</div>
+     <div class="seat available">11</div>
+    
+    <div class="seat available">13</div>
+    <div class="seat available">14</div>
+    <div class="seat available">15</div>
+    <div class="seat available">16</div>
+  </div>
+
+  <!-- Executive -->
+  <h3>₹280 Executive</h3>
+  <div class="row">
+    <div class="seat available">11</div>
+    <div class="seat available">12</div>
+    <div class="seat sold">13</div>
+    <div class="seat sold">14</div>
+    <div class="seat available">15</div>
+    <div class="seat available">16</div>
+  </div>
+
+  <!-- Royal -->
+  <h3>₹260 Royal</h3>
+  <div class="row">
+    <div class="seat available">01</div>
+    <div class="seat available">02</div>
+    <div class="seat sold">03</div>
+    <div class="seat available">04</div>
+    <div class="seat available">05</div>
+    <div class="seat available">06</div>
+    <div class="seat available">07</div>
+    <div class="seat available">08</div>
+    <div class="seat available">09</div>
+    <div class="seat available">10</div>
+    <div class="seat available">11</div>
+    <div class="seat available">12</div>
+  </div>
+
+  <!-- Marvel -->
+  <h3>₹240 Marvel</h3>
+  <div class="row">
+    <div class="seat available">01</div>
+    <div class="seat available">02</div>
+    <div class="seat sold">03</div>
+    <div class="seat available">04</div>
+    <div class="seat available">05</div>
+    <div class="seat available">06</div>
+    <div class="seat available">07</div>
+    <div class="seat available">08</div>
+    <div class="seat available">09</div>
+    <div class="seat available">10</div>
+    <div class="seat available">11</div>
+    <div class="seat available">12</div>
+    </div><br>
+    <div class="row">
+    <div class="seat available">01</div>  
+    <div class="seat available">01</div>
+    <div class="seat available">01</div>
+     <div class="seat available">01</div>
+    <div class="seat available">01</div>    
+    <div class="seat available">01</div>
+     <div class="seat available">01</div>
+     <div class="seat available">01</div>
+      <div class="seat available">01</div>
+      <div class="seat available">01</div>
+       <div class="seat available">01</div>
+         <div class="seat available">01</div>
+       </div>
+
+  </div>
+    <div class="screen">SCREEN THIS WAY</div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <span><span class="box available-box"></span> Available</span>
+    <span><span class="box selected-box"></span> Selected</span>
+    <span><span class="box sold-box"></span> Sold</span>
+  </div>
+
+  <script>
+    const seats = document.querySelectorAll('.seat.available');
+    seats.forEach(seat => {
+      seat.addEventListener('click', () => {
+        seat.classList.toggle('selected');
+      });
+    });
+  </script>
+
 </body>
 </html>
