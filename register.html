@@ -3,15 +3,34 @@
 <head>
   <title>Register - BookNow</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", function (event) {
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const password = form.password.value.trim();
+
+        if (name === "" || email === "" || password === "") {
+          alert("Please fill in all fields before submitting.");
+          event.preventDefault(); 
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <form action="backend/register.php" method="POST">
     <h2>Register</h2>
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button onclick="window.location.href='index.html'">Register</button>
+    <input type="text" name="name" placeholder="Full Name">
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+
+    <button onclick="window.location.href='index.html'"  type="submit">Register</button>
+
     <p>Already have an account? <a href="login.html">Login</a></p>
   </form>
 </body>
 </html>
+
