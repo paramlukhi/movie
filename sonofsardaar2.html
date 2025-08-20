@@ -18,7 +18,61 @@
       font-size: 22px;
     }
     .date{
-        background-color: red;
+        display:flex;
+        justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .date-box {
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      width: 60px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .date-box.active {
+      background: #e74c3c;
+      color: white;
+      font-weight: bold;
+    }
+     .cinema {
+      background: #fff;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .cinema h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .showtimes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .time {
+      padding: 8px 15px;
+      border: 1px solid #2ecc71;
+      border-radius: 6px;
+      color: #2ecc71;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .time.fast-filling {
+      border-color: orange;
+      color: orange;
+    }
+    .time.booked {
+      background: #ddd;
+      color: #555;
+      cursor: not-allowed;
+    }
+    .link{
+        text-decoration: none;
+        color:#2ecc71;
     }
     </style>
     <meta charset="UTF-8">
@@ -37,7 +91,14 @@
            <div class="date-box">21<br>AUG</div>
 
      </div>
-    
+    <div class="cinema">
+        <h2>Rajhans Cinemas: Rajhans Precia, Surat</h2>
+    <div class="showtimes">
+        <div class="time">
+            <a href="seatselection.html" class="link">10:00 AM</a>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
 <html>
