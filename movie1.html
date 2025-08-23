@@ -8,18 +8,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Son Of Sardaar 2 - Movie Details</title>
   <style>
-    .container {
-  width: 90%; /* adjusts with screen */
-  max-width: 1200px; /* looks good on big screens */
-}
+  .body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+  .movies { display: flex; flex-wrap: wrap; gap: 16px; }
+  .movie-card {
+    flex: 1 1 100%;
+    background: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  .movie-title { font-size: clamp(1.2rem, 4vw, 1.6rem); }
+  @media (min-width: 600px) {
+    .movie-card { flex: 1 1 48%; }
+  }
+  @media (min-width: 1025px) {
+    .movie-card { flex: 1 1 30%; }
+  }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('Screenshot 2025-08-07 220757.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
+
+  
 
     .overlay {
       background: rgba(0, 0, 0, 0.8);
