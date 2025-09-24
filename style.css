@@ -207,12 +207,10 @@ input::placeholder, textarea::placeholder {
 text-align:left;
 }
 
-.movie3{
- 
-  margin-top:33px;
-
-}
-
-.movie6{
-  margin-top:40px;
+.movie{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
