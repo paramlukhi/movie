@@ -49,14 +49,14 @@ color: #f0f0f0;
 
 /* Buttons */
 button, .btn {
-  background: #f39c12;
+  
   border: none;
   padding: 12px 24px;
   font-weight: 700;
-  color: #121212;
-  border-radius: 5px;
+  color:white;
+  border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 10px #f39c12aa;
+  background-color:black;  
   user-select: none;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -197,10 +197,10 @@ input::placeholder, textarea::placeholder {
     justify-content: center;
   }
   .movie-card {
-    width: 180px;
+    width: 100%;
   }
   .movie-card img {
-    height: 250px;
+    height: auto;
   }
 }
 .movie{
