@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Tickets</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .movie-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-10">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-2xl md:text-3xl font-bold text-indigo-600">
+                Ticketify
+            </h1>
+            <nav>
+                <ul class="flex space-x-4 text-sm md:text-base font-medium">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Movies</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Theaters</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content - Movie Grid -->
+    <main class="container mx-auto py-24 px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Now Showing</h2>
+
+        <!-- Movie List Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+            <!-- Movie Card 1 -->
+            <div class="movie-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x900/4F46E5/FFFFFF?text=Movie+1" alt="Movie Poster" class="w-full h-auto object-cover">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900 truncate">The Galactic Odyssey</h3>
+                    <p class="text-sm text-gray-500 mt-1">Action, Sci-Fi</p>
+                    <button class="book-now-btn mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="movie-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x900/4F46E5/FFFFFF?text=Movie+2" alt="Movie Poster" class="w-full h-auto object-cover">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900 truncate">Mystery of the Manor</h3>
+                    <p class="text-sm text-gray-500 mt-1">Thriller, Mystery</p>
+                    <button class="book-now-btn mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Movie Card 3 -->
+            <div class="movie-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x900/4F46E5/FFFFFF?text=Movie+3" alt="Movie Poster" class="w-full h-auto object-cover">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900 truncate">Love in Bloom</h3>
+                    <p class="text-sm text-gray-500 mt-1">Romance, Drama</p>
+                    <button class="book-now-btn mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Movie Card 4 -->
+            <div class="movie-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x900/4F46E5/FFFFFF?text=Movie+4" alt="Movie Poster" class="w-full h-auto object-cover">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900 truncate">The Last Dragon</h3>
+                    <p class="text-sm text-gray-500 mt-1">Fantasy, Adventure</p>
+                    <button class="book-now-btn mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md">Book Now</button>
+                </div>
+            </div>
+
+            <!-- You can add more movie cards here with the same structure -->
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+        <p>&copy; 2024 Ticketify. All rights reserved.</p>
+    </footer>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-md transform scale-95 transition-transform">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Booking Confirmed!</h3>
+            <p class="text-gray-700">Your ticket for <span id="modalMovieTitle" class="font-semibold text-indigo-600"></span> has been booked. Enjoy the movie!</p>
+            <button id="closeModalBtn" class="mt-6 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Get all "Book Now" buttons
+        const bookNowButtons = document.querySelectorAll('.book-now-btn');
+        const bookingModal = document.getElementById('bookingModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalMovieTitle = document.getElementById('modalMovieTitle');
+
+        // Add a click event listener to each button
+        bookNowButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the movie title from the parent card
+                const movieCard = button.closest('.movie-card');
+                const movieTitle = movieCard.querySelector('h3').textContent;
+
+                // Update the modal's movie title and show the modal
+                modalMovieTitle.textContent = movieTitle;
+                bookingModal.classList.remove('hidden');
+                bookingModal.classList.add('flex');
+            });
+        });
+
+        // Add a click event listener to close the modal
+        closeModalBtn.addEventListener('click', () => {
+            bookingModal.classList.add('hidden');
+            bookingModal.classList.remove('flex');
+        });
+
+        // Close the modal if the user clicks outside of it
+        bookingModal.addEventListener('click', (event) => {
+            if (event.target === bookingModal) {
+                bookingModal.classList.add('hidden');
+                bookingModal.classList.remove('flex');
+            }
+        });
+
+    </script>
+
+</body>
+</html>
