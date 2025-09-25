@@ -6,11 +6,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email   = $_POST['email'];
     $message = $_POST['message'];
 
-    $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
-    if ($conn->query($sql) === TRUE) {
+    try {
+        $sql = "INSERT INTO contacts (name, email, message) VALUES (:name, :email, :message)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':message', $message);
+        $stmt->execute();
+
         echo "✅ Message sent successfully!";
-    } else {
-        echo "❌ Error: " . $conn->error;
+    } catch(PDOException $e) {
+        echo "❌ Error: " . $e->getMessage();
     }
 }
 ?>
