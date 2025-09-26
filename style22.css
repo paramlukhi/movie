@@ -80,9 +80,25 @@
 
 .slide-btn.left {
   left: 10px;
+  position: fixed;
 }
 
 .slide-btn.right {
   right: 10px;
- left: 30p;
+  left: 30px;
+
+   position: static;
+}
+
+.image1, .image2, .image3{
+  display: flex;
+  align-self: start;
+  width: auto;
+  margin-left: 7px;
+}
+.flex{
+  display: inline;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
