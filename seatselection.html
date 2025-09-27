@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Seat Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #fff;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .screen {
+      width: 70%;
+      margin: 20px auto;
+      background: #ccc;
+      height: 40px;
+      border-radius: 5px;
+      line-height: 40px;
+      font-weight: bold;
+      margin-top: 90px;
+    }
+
+    .divider {
+      width: 70%;
+      margin: 25px auto;
+      border-top: 2px solid #ccc;  /* horizontal line */
+    }
+
+    .category {
+      margin: 15px 0 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0;
+    }
+
+    .row .left,
+    .row .right ,.row .left1{
+      display: flex;
+    }
+
+    .left {
+      margin-right: 150px; /* space between left and right seats */
+    }
+.left1{
+  margin-right: 342px;
+}
+    .seatavailable {
+      width: 35px;
+      height: 35px;
+      margin: 5px;
+      border: 2px solid #28a745;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 32px;
+      font-size: 12px;
+    }
+
+    .seatavailable.booked {
+      background: #ccc;
+      border: 2px solid #ccc;
+      cursor: not-allowed;}
+
+      .seatavailable.available {
+      background: white;
+      color: #000;
+    }
+
+    .seatavailable.selected {
+      background: #28a745;
+      color: #fff;
+    }
+    .legend {
+      margin-top: 20px;
+    }
+    .legend span {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .legend .box {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 5px;
+      border-radius: 3px;
+      border: 1px solid #444;
+    }
+    .set-box { background: white; }
+    .selected-box { background: #4CAF50; }
+    .sold-box { background: #aaa; }
+  
+  </style>
+</head>
+<body>
+
+  <h1>Movie Seat Booking</h1>
+
+  <!-- EXECUTIVE SECTION -->
+  <div class="category">₹490 Recliner</div>
+   <div class="divider"></div>
+
+  <div class="row">
+   
+      <div class="seatavailable">A1</div><div class="seatavailable booked">A2</div><div class="seatavailable booked">A3</div>
+      <div class="seatavailable booked">A4</div><div class="seatavailable">A5</div><div class="seatavailable">A6</div>
+      <div class="seatavailable">A7</div><div class="seatavailable">A8</div><div class="seatavailable">A9</div>
+      <div class="seatavailable">A10</div><div class="seatavailable">A11</div><div class="seatavailable">A12</div>
+      <div class="seatavailable">A13</div>
+      <div class="seatavailable">A14</div><div class="seatavailable booked">A15</div>
+      <div class="seatavailable">A16</div><div class="seatavailable">A17</div>
+
+  </div>
+    <div class="category">₹280 Executive</div>
+     <div class="divider"></div>
+  <div class="row">
+    <div class="left">
+      <div class="seatavailable booked">B1</div><div class="seatavailable booked">B2</div><div class="seatavailable booked">B3</div>
+      <div class="seatavailable booked">B4</div><div class="seatavailable">B5</div><div class="seatavailable">B6</div>
+      <div class="seatavailable">B7</div><div class="seatavailable">B8</div><div class="seatavailable">B9</div>
+      <div class="seatavailable">B10</div><div class="seatavailable booked">B11</div><div class="seatavailable booked">B12</div>
+      <div class="seatavailable">B13</div>
+    </div>
+    <div class="right">
+      <div class="seatavailable booked">B14</div><div class="seatavailable booked">B15</div>
+      <div class="seatavailable booked">B16</div><div class="seatavailable booked">B17</div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="left">
+    <div class="seatavailable booked">C1</div><div class="seatavailable">C2</div><div class="seatavailable booked">C3</div>
+    <div class="seatavailable booked">C4</div><div class="seatavailable booked">C5</div><div class="seatavailable booked">C6</div>
+    <div class="seatavailable">C7</div><div class="seatavailable">C8</div><div class="seatavailable">C9</div>
+    <div class="seatavailable">C10</div><div class="seatavailable">C11</div><div class="seatavailable">C12</div>
+    <div class="seatavailable">C13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">C14</div><div class="seatavailable">C15</div>
+    <div class="seatavailable">C16</div><div class="seatavailable">C17</div>
+  </div>
+</div>
+ <div class="row">
+  <div class="left">
+    <div class="seatavailable">D1</div><div class="seatavailable">D2</div><div class="seatavailable booked">D3</div>
+    <div class="seatavailable booked">D4</div><div class="seatavailable booked">D5</div><div class="seatavailable booked">D6</div>
+    <div class="seatavailable booked">D7</div><div class="seatavailable">D8</div><div class="seatavailable">D9</div>
+    <div class="seatavailable">D10</div><div class="seatavailable">D11</div><div class="seatavailable">D12</div>
+    <div class="seatavailable">D13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">D14</div><div class="seatavailable">D15</div>
+    <div class="seatavailable">D16</div><div class="seatavailable">D17</div>
+  </div>
+</div>
+<div class="row">
+  <div class="left">
+    <div class="seatavailable">E1</div><div class="seatavailable">E2</div><div class="seatavailable">E3</div>
+    <div class="seatavailable">E4</div><div class="seatavailable">E5</div><div class="seatavailable">E6</div>
+    <div class="seatavailable">E7</div><div class="seatavailable">E8</div><div class="seatavailable">E9</div>
+    <div class="seatavailable">E10</div><div class="seatavailable">E11</div><div class="seatavailable">E12</div>
+    <div class="seatavailable">E13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable booked">E14</div><div class="seatavailable booked">E15</div>
+    <div class="seatavailable booked">E16</div><div class="seatavailable booked">E17</div>
+  </div>
+</div>
+<div class="row">
+  <div class="left">
+    <div class="seatavailable">F1</div><div class="seatavailable">F2</div><div class="seatavailable">F3</div>
+    <div class="seatavailable">F4</div><div class="seatavailable">F5</div><div class="seatavailable">F6</div>
+    <div class="seatavailable">F7</div><div class="seatavailable">F8</div><div class="seatavailable">F9</div>
+    <div class="seatavailable">F10</div><div class="seatavailable">F11</div><div class="seatavailable">F12</div>
+    <div class="seatavailable">F13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">F14</div><div class="seatavailable">F15</div>
+    <div class="seatavailable booked">F16</div><div class="seatavailable">F17</div>
+  </div>
+</div>
+<div class="row">
+  <div class="left1">
+    <div class="seatavailable">G1</div><div class="seatavailable">G2</div><div class="seatavailable">G3</div>
+    <div class="seatavailable">G4</div><div class="seatavailable">G5</div><div class="seatavailable">G6</div>
+    <div class="seatavailable">G7</div><div class="seatavailable">G8</div><div class="seatavailable">G9</div>
+    <div class="seatavailable booked">G10</div><div class="seatavailable booked">G11</div><div class="seatavailable booked">G12</div>
+    <div class="seatavailable booked">G13</div>
+  </div>
+</div>
+<div class="row">
+  <div class="left1">
+    <div class="seatavailable">H1</div><div class="seatavailable">H2</div><div class="seatavailable ">H3</div>
+    <div class="seatavailable">H4</div><div class="seatavailable">H5</div><div class="seatavailable">H6</div>
+    <div class="seatavailable">H7</div><div class="seatavailable">H8</div><div class="seatavailable">H9</div>
+    <div class="seatavailable">H10</div><div class="seatavailable">H11</div><div class="seatavailable">H12</div>
+    <div class="seatavailable">H13</div>
+  </div>
+
+</div>
+
+<!-- Row I -->
+<div class="row">
+  <div class="left1">
+    <div class="seatavailable">I1</div><div class="seatavailable">I2</div><div class="seatavailable">I3</div>
+    <div class="seatavailable">I4</div><div class="seatavailable">I5</div><div class="seatavailable">I6</div>
+    <div class="seatavailable">I7</div><div class="seatavailable">I8</div><div class="seatavailable">I9</div>
+    <div class="seatavailable">I10</div><div class="seatavailable">I11</div><div class="seatavailable">I12</div>
+    <div class="seatavailable">I13</div>
+  </div>
+ 
+  </div>
+
+<!-- Row J -->
+<div class="row">
+  <div class="left1">
+    <div class="seatavailable">J1</div><div class="seatavailable">J2</div><div class="seatavailable ">J3</div>
+    <div class="seatavailable">J4</div><div class="seatavailable">J5</div><div class="seatavailable">J6</div>
+    <div class="seatavailable">J7</div><div class="seatavailable">J8</div><div class="seatavailable">J9</div>
+    <div class="seatavailable">J10</div><div class="seatavailable">J11</div><div class="seatavailable">J12</div>
+    <div class="seatavailable">J13</div>
+  </div>
+  </div>
+
+
+
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- ROYAL SECTION -->
+  <div class="category">₹210 ROYAL</div>
+  <div class="row">
+    <div class="left">
+      <div class="seatavailable">K1</div><div class="seatavailable">K2</div><div class="seatavailable">K3</div>
+      <div class="seatavailable">K4</div><div class="seatavailable">K5</div><div class="seatavailable">K6</div>
+      <div class="seatavailable">K7</div><div class="seatavailable">K8</div><div class="seatavailable">K9</div>
+      <div class="seatavailable">K10</div><div class="seatavailable">K11</div><div class="seatavailable">K12</div>
+      <div class="seatavailable">K13</div>
+    </div>
+    <div class="right">
+      <div class="seatavailable">K14</div><div class="seatavailable">K15</div>
+      <div class="seatavailable">K16</div><div class="seatavailable">K17</div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="left">
+    <div class="seatavailable">L1</div><div class="seatavailable">L2</div><div class="seatavailable ">L3</div>
+    <div class="seatavailable">L4</div><div class="seatavailable">L5</div><div class="seatavailable">L6</div>
+    <div class="seatavailable">L7</div><div class="seatavailable">L8</div><div class="seatavailable">L9</div>
+    <div class="seatavailable">L10</div><div class="seatavailable">L11</div><div class="seatavailable">L12</div>
+    <div class="seatavailable">L13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">L14</div><div class="seatavailable">L15</div>
+    <div class="seatavailable booked">L16</div><div class="seatavailable">L17</div>
+  </div>
+</div>
+
+<!-- Row M -->
+<div class="row">
+  <div class="left">
+    <div class="seatavailable">M1</div><div class="seatavailable">M2</div><div class="seatavailable booked">M3</div>
+    <div class="seatavailable">M4</div><div class="seatavailable">M5</div><div class="seatavailable">M6</div>
+    <div class="seatavailable">M7</div><div class="seatavailable">M8</div><div class="seatavailable">M9</div>
+    <div class="seatavailable">M10</div><div class="seatavailable">M11</div><div class="seatavailable">M12</div>
+    <div class="seatavailable">M13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">M14</div><div class="seatavailable">M15</div>
+    <div class="seatavailable booked">M16</div><div class="seatavailable">M17</div>
+  </div>
+</div>
+
+
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- MARVEL SECTION -->
+  <div class="category">₹160 MARVEL</div>
+<div class="row">
+  <div class="left">
+    <div class="seatavailable">N1</div><div class="seatavailable">N2</div><div class="seatavailable booked">N3</div>
+    <div class="seatavailable">N4</div><div class="seatavailable">N5</div><div class="seatavailable">N6</div>
+    <div class="seatavailable">N7</div><div class="seatavailable">N8</div><div class="seatavailable">N9</div>
+    <div class="seatavailable">N10</div><div class="seatavailable">N11</div><div class="seatavailable">N12</div>
+    <div class="seatavailable">N13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">N14</div><div class="seatavailable">N15</div>
+    <div class="seatavailable booked">N16</div><div class="seatavailable">N17</div>
+  </div>
+</div>
+
+<!-- Row O -->
+<div class="row">
+  <div class="left">
+    <div class="seatavailable">O1</div><div class="seatavailable">O2</div><div class="seatavailable booked">O3</div>
+    <div class="seatavailable">O4</div><div class="seatavailable">O5</div><div class="seatavailable">O6</div>
+    <div class="seatavailable">O7</div><div class="seatavailable">O8</div><div class="seatavailable">O9</div>
+    <div class="seatavailable">O10</div><div class="seatavailable">O11</div><div class="seatavailable">O12</div>
+    <div class="seatavailable">O13</div>
+  </div>
+  <div class="right">
+    <div class="seatavailable">O14</div><div class="seatavailable">O15</div>
+    <div class="seatavailable booked">O16</div><div class="seatavailable">O17</div>
+  </div>
+</div>
+  <div class="screen">SCREEN</div>
+
+<div class="legend">
+    <span><span class="box available-box"></span> Available</span>
+    <span><span class="box selected-box"></span> Selected</span>
+    <span><span class="box sold-box"></span> Sold</span>
+  </div>
+
+  <script>
+    const seats = document.querySelectorAll('.seatavailable');
+    seats.forEach(seat=> {
+      seat.addEventListener('click', () => {
+        seat.classList.toggle('selected');
+      });
+    });
+  </script>
+
+</body>
+</html>

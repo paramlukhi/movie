@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+              body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #fff;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .date{
+        display:flex;
+        justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .date-box {
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      width: 60px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .date-box.active {
+      background: #e74c3c;
+      color: white;
+      font-weight: bold;
+    }
+     .cinema {
+      background: #fff;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .cinema h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .showtimes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .time {
+      padding: 8px 15px;
+      border: 1px solid #2ecc71;
+      border-radius: 6px;
+      color: #2ecc71;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .time.fast-filling {
+      border-color: orange;
+      color: orange;
+    }
+    .time.booked {
+      background: #ddd;
+      color: #555;
+      cursor: not-allowed;
+    }
+    .link{
+        text-decoration: none;
+        color:#2ecc71;
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1: The Movie - Movie Details</title>
+</head>
+<body>
+    <header>
+        <h1>F1: The Movie</h1>
+        <p>2h 35m  | Action,Drama,Sports  | UA16+  | 27 Jun, 2025</p>
+    </header>
+    <div class="date">
+        <div class="date-box active">18<br>AUG</div>
+         <div class="date-box">19<br>AUG</div>
+          <div class="date-box">20<br>AUG</div>
+           <div class="date-box">21<br>AUG</div>
+
+     </div>
+    <div class="cinema">
+        <h2>INOX: VR Mall, Surat</h2>
+    <div class="showtimes">
+        <div class="time">
+            <a href="seatselection.html" class="link">09:30 AM</a>
+        </div>
+        <div class="time">
+            <a href="seatselection.html" class="link">3:10 PM</a>
+        </div>
+        
+    </div>
+    </div>
+
+  <div class="cinema">
+      <h2>Rajhans Cinemas: Rajhans Precia, Surat</h2>
+    <div class="showtimes">
+    <div class="time">
+      <a href="seatselection.html" class="link">
+        12:00AM
+      </a>
+    </div>
+    <div class="time">
+      <a href="seatselection.html" class="link">
+        08:45 PM
+      </a>
+    </div>
+    </div>
+   </div>
+
+    <div class="cinema">
+      <h2>PVR: Rahul Raj, Surat</h2>
+    <div class="showtimes">
+    <div class="time">
+      <a href="seatselection.html" class="link">
+        7:00AM
+      </a>
+    </div>
+    <div class="time">
+      <a href="seatselection.html" class="link">
+        05:15 PM
+      </a>
+    </div>
+    </div>
+   </div>
+
+    <div class="cinema">
+      <h2>Rajhans Cinemas: Rajhans Flamingo, Katargam</h2>
+    <div class="showtimes">
+    <div class="time">
+      <a href="seatselection.html" class="link">
+        9:25 AM
+      </a>
+    </div>
+    <div class="time">
+      <a href="seatselection.html" class="link">
+        03:15 PM
+      </a>
+    </div>
+    </div>
+   </div>
+</body>
+</html>
