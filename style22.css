@@ -1,5 +1,7 @@
 .line{
+  margin-left:40px;
   display: flex;
+  gap: 20%;
 }
 
 .movie-card{
