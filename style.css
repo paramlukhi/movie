@@ -203,6 +203,17 @@ input::placeholder, textarea::placeholder {
     height: auto;
   }
 }
+@media (max-width: 480px) {
+  .movie-container {
+    justify-content: center;
+  }
+  .movie-card {
+    width: 100%;
+  }
+  .movie-card img {
+    height: auto;
+  }
+}
 .movie{
 text-align:left;
 }
