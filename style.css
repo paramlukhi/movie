@@ -205,6 +205,8 @@ input::placeholder, textarea::placeholder {
 
 /* Responsive */
 /* Image Row (Responsive Grid) */
+
+@media (max-width: 768px){
 .flex {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -218,7 +220,7 @@ input::placeholder, textarea::placeholder {
   border-radius: 10px;
   object-fit: cover;
 }
-
+}
 
 
 
