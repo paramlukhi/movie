@@ -204,6 +204,20 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Responsive */
+/* Image Row (Responsive Grid) */
+.flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.image1,.image2,.image3 {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
 
 
 
