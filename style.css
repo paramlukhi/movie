@@ -206,7 +206,7 @@ input::placeholder, textarea::placeholder {
 /* Responsive */
 /* Image Row (Responsive Grid) */
 
-@media (width: 768px){
+@media (max-width: 768px){
   .book{
     width: auto;
   }
@@ -219,20 +219,21 @@ input::placeholder, textarea::placeholder {
     position: absolute;
     top: 60px;
     left: 0px;
-    right: 1px;
+    right: auto;
     padding: 10px;
   }
   .nav-links li {
     margin: 10px 0;
   }
 .flex {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
-  padding: 20px;
+
+  grid-template-columns: repeat(auto-fit, minmax( 3fr));
+  gap: 0px;
+  
 }
 
 .image1,.image2,.image3 {
+
   width: 10%;
   height: auto;
   border-radius: 10px;
