@@ -206,7 +206,7 @@ input::placeholder, textarea::placeholder {
 /* Responsive */
 /* Image Row (Responsive Grid) */
 
-@media (max-width: 2000px){
+@media (max-width: 2500px){
   .book{
     width: auto;
   }
