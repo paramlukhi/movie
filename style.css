@@ -207,6 +207,8 @@ input::placeholder, textarea::placeholder {
 @media (max-width: 768px) {
   .movie-container {
     justify-content: center;
+    gap: 20px;
+
   }
   .movie-card {
     width: 100%;
@@ -236,3 +238,30 @@ input::placeholder, textarea::placeholder {
   margin-top: 20px;
 }
 
+.movie1{
+  flex-grow: 1%;
+}
+.carouselslide{
+  width: 100%;
+    
+  flex-shrink: 10%;
+   flex-grow: 5%;
+   flex-direction: column;
+     
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none; /* hide by default */
+    background: #222;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
