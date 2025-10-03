@@ -88,23 +88,46 @@
     }
    h1{
     color:black;
-   margin-left:50px;
+   margin-left:10px;
    margin-top:30px;
    margin-bottom:35px;
    }
-   pre{
+   p{
      color:gray;
     font-size:20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
    }
    h2{
-    margin-left:50px;
+    margin-left:10px;
     font-size:34px;
     margin-top:60px;
     color:black;
    }
    
+@media (max-width: 768px) {
+  .overlay {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .poster {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .details {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
 
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 <body>
@@ -137,7 +160,7 @@
   
     <div class="about">
     <h1>About the movie</h1>
-    <pre>
+    <p>
       Dubbed "the greatest that never was," Sonny Hayes (Brad Pitt) was FORMULA 1`s most promising phenom of the 1990s until an 
       accident on the track nearly ended his career. Thirty years later, he`s a nomadic racer-for-hire when he`s approached by his
       former teammate Ruben Cervantes (Javier Bardem), owner of a struggling FORMULA 1 team that is on the verge of collapse.
@@ -145,7 +168,7 @@
       Ruben convinces Sonny to come back to FORMULA 1 for one last shot at saving the team and being the best in the world. He`ll 
       drive alongside Joshua Pearce (Damson Idris), the team`s hotshot rookie intent on setting his own pace. But as the engines
       roar, Sonny`s past catches up with him and he finds that in FORMULA 1, your teammate is your fiercest competition-and the
-      road to redemption is not something you can travel alone..</pre>
+      road to redemption is not something you can travel alone..</p>
    </div>
 
   </div>

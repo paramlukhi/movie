@@ -88,7 +88,7 @@
     }
    h1{
     color:black;
-   margin-left:50px;
+   margin-left:10px;
    margin-top:30px;
    margin-bottom:35px;
    }
@@ -96,13 +96,37 @@
      color:gray;
     font-size:20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
    }
    h2{
-    margin-left:50px;
+    margin-left:10px;
     font-size:34px;
     margin-top:60px;
     color:black;
    }
+   @media (max-width: 768px) {
+  .overlay {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .poster {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .details {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
    
 
   </style>
@@ -135,9 +159,9 @@
   
     <div class="about">
     <h1>About the movie</h1>
-    <pre>
+    <p>
   The Bad Guys are struggling to find trust and acceptance in their newly minted lives as Good Guys when they are pulled out of 
-  retirement and forced to do "one last job" by an all-female squad of criminals.</pre>
+  retirement and forced to do "one last job" by an all-female squad of criminals.</p>
    </div>
 
   </div>
