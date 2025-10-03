@@ -278,12 +278,13 @@ input::placeholder, textarea::placeholder {
 
 
 
-.movies{
+.moviess{
   display: flex;
   flex-grow: 1%;
   margin-top: 10px;
+  text-align: center;
+  align-items: center;
 }
-
 
 .carouselslide{
   width: 100%;
