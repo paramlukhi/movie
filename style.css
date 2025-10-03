@@ -214,52 +214,7 @@ input::placeholder, textarea::placeholder {
 /* Responsive */
 /* Image Row (Responsive Grid) */
 
-@media ( max-width: 2400px,) {
-  .book{
-    width: 100%;
-  
-  }
-   .nav-links {
-    flex-direction: column;
-    margin-top: 10%;
-    background: #222;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    left: 0px;
-    padding: 10px;
-  
-  }
-  .nav-links li {
-    margin: 10px 0;
-  }
-.flex {
 
-  grid-template-columns: repeat(auto-fit, minmax( 3fr));
-  gap: 0px;
-  
-}
-
-.image1,.image2,.image3 {
-
-  width: 10%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-.nav-links {
-  
-  margin-right: 25px;
-  background: #1f1f1f;
-  padding: 10px 0px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.6);
-
-}
-.newmovie{
-  margin-top: 5px;
-}
-
-}
 
 
 
