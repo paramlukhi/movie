@@ -140,3 +140,20 @@
   
   margin-bottom: 5%;
 }
+
+.headofupcomingmovie{
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 12px 12px 0 0;
+ 
+}
+.linkofupm{
+  text-decoration: none;
+  color: white;
+
+}
