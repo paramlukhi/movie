@@ -46,7 +46,7 @@ session_start();
 
 
       $cn = $_POST["ContectNumber"];
-      $sql = "INSERT INTO `users`(`name`, `email`, `password`, `contect_num`) VALUES ('$nm','$em','$pass','$cn')";
+      $sql = "INSERT INTO users (name, email, password, contect_num) VALUES ('$nm','$em','$pass','$cn')";
       $re = mysqli_query($conn,$sql);
       if($re)
       {

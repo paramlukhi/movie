@@ -64,56 +64,5 @@ session_start();
 </body>
 </html>
 
- <?php
-/*include 'connection.php';
-session_start();
+ 
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $action = $_POST['action'];
-    
-    if ($action == 'register') {
-        // REGISTRATION
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        
-        // Check if email exists
-        $check_sql = "SELECT * FROM users WHERE email='$email'";
-        $check_result = $conn->query($check_sql);
-        
-        if ($check_result->num_rows > 0) {
-            echo "Email already exists!";
-        } else {
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
-            
-            if ($conn->query($sql) === TRUE) {
-                echo "Registration successful! You can now login.";
-            } else {
-                echo "Error: " . $conn->error;
-            }
-        }
-        
-    } elseif ($action == 'login') {
-        // LOGIN
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        
-        $sql = "SELECT * FROM users WHERE email='$email'";
-        $result = $conn->query($sql);
-        
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-            if (password_verify($password, $user['password'])) {
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['user_name'] = $user['name'];
-                echo "Login successful! Welcome " . $user['name'];
-            } else {
-                echo "Wrong password!";
-            }
-        } else {
-            echo "User not found!";
-        }
-    }
-}*/
-?>

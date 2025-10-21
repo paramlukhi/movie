@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+   <style>
+body{
+  margin-top:110px;
+}
+  </style>
+</head>
+<body><center>
+  <h2 style="text-align:center;">Contact Us</h2>
+  <form action="submit_contact.php" method="POST">
+    <input type="text" name="name" required placeholder="Your Name">
+    <input type="email" name="email" required placeholder="Your Email">
+    <textarea name="message" required placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>

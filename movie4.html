@@ -3,112 +3,51 @@
 <head>
    <link rel="stylesheet" href="style22.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="headerfooter.css">
+<link rel="stylesheet" href="movies.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Fantastic Four: First Steps - Movie Details</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('Screenshot 2025-08-07 220757.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      background-color: #111;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 40px;
-      display: flex;
-      align-items: flex-start;
-      min-height: 44vh;
-    }
-
-    .poster {
-      width: 300px;
-      flex-shrink: 0;
-    }
-
-    .poster img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .details {
-      margin-left: 30px;
-      max-width: 700px;
-    }
-
-    .title {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .rating {
-      font-size: 20px;
-      color: #ff5678;
-      margin-bottom: 15px;
-    }
-
-    .options {
-      margin-bottom: 15px;
-    }
-
-    .options span {
-      background-color: #333;
-      padding: 8px 12px;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-
-    .info {
-      font-size: 16px;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      background-color: #ff3f6c;
-      border: none;
-      padding: 14px 28px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      color: white;
-    }
-
-    .btn:hover {
-      background-color: #e0355f;
-    }
-
-    .about{
-     
-      font-size:17px;
-      line-height:1.6em;
-
-    }
-   h1{
-    color:white;
-   margin-left:10px;
-   margin-top:30px;
-   margin-bottom:35px;
-   }
-   p{
-     color:gray;
-    font-size:20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 10px;
-   }
-   h2{
-    margin-left:10px;
-    font-size:34px;
-    margin-top:60px;
-    color:white;
-   }
-   
-  </style>
+  
 </head>
 <body>
+  <header class=" bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-10;">  
+ 
+
+  <div class="navbar">
+    <h1>🎬 Book Now</h1>
+
+    <div class="profile">
+      <img src="userimg.png" alt="Profile" class="profilePic" id="profilePic" />
+      <div class="dropdown" id="dropdownMenu">
+    
+           <ul>
+             <li><a href="index.php">Home</a></li>
+            <li><a href="newmovie.html">New Movie</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+              <li><a href="login.php">logout</a></li>
+          </ul>
+     
+      </div>
+    </div>
+  </div>
+
+  </header>
+   <script>
+    const profilePic = document.getElementById('profilePic');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profilePic.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', (e) => {
+      if (!profilePic.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+  </script>
   <div>
   <div class="overlay">
     <div class="poster">
@@ -281,7 +220,10 @@
 </tr>
 </table>
 </div>
-<section class="about-us">
+
+  <!-- ===== Footer Section ===== -->
+<footer class="footer">
+    <section class="about-us">
     <hr style="width: auto;">
    <div class="about-us">
 
@@ -297,49 +239,7 @@
   
 </div>
 </section>
-
-<style>
-  .about-us {
-    background: #222;
-    color: #fff;
-    padding: 5px 10px;
-    text-align: center;
-    margin-top: 50px;
-    
-  }
-
-  .about-us h2 {
-    color: #f39c12;
-    margin-bottom: 10px;
-  }
-
-  .about-us p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
-    font-size: 18px;
-  }
-
-  .btn-about {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #f39c12;
-    color: #111;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  .btn-about:hover {
-    background: #fff;
-    color: #111;
-  }
-</style>
 <hr>
-  <!-- ===== Footer Section ===== -->
-<footer class="footer">
   <div class="footer-container">
 
     <!-- Contact Info -->
@@ -372,57 +272,5 @@
     <p>© 2025 BookNow. All rights reserved.</p>
   </div>
 </footer>
-
-<!-- ===== CSS ===== -->
-<style>
-  .footer {
-    background: #111;
-    color: #fff;
-    padding: 40px 20px;
-    margin-top: 50px;
-  }
-
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 15px;
-  }
-
-  .footer-section h3 {
-    margin-bottom: 15px;
-    color: #f39c12; /* Highlight color */
-  }
-
-  .footer-section a {
-    color: #bbb;
-    text-decoration: none;
-    display: block;
-    margin: 5px 0;
-    transition: 0.3s;
-  }
-
-  .footer-section a:hover {
-    color: #f39c12;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #444;
-    padding-top: 15px;
-    font-size: 14px;
-    color: #aaa;
-  }
-</style>
-
-
 </body>
 </html>

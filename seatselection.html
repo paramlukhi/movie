@@ -11,9 +11,7 @@
       background: #fff;
     }
 
-    h1 {
-      margin: 20px 0;
-    }
+    h1 { margin: 20px 0; }
 
     .screen {
       width: 70%;
@@ -29,7 +27,7 @@
     .divider {
       width: 70%;
       margin: 25px auto;
-      border-top: 2px solid #ccc;  /* horizontal line */
+      border-top: 2px solid #ccc;
     }
 
     .category {
@@ -42,19 +40,17 @@
       display: flex;
       justify-content: center;
       margin: 8px 0;
+      flex-wrap: wrap;
     }
 
-    .row .left,
-    .row .right ,.row .left1{
+    .row .left, .row .right, .row .left1 {
       display: flex;
+      flex-wrap: wrap;
     }
 
-    .left {
-      margin-right: 150px; /* space between left and right seats */
-    }
-.left1{
-  margin-right: 342px;
-}
+    .left { margin-right: 150px; }
+    .left1 { margin-right: 342px; }
+
     .seatavailable {
       width: 35px;
       height: 35px;
@@ -65,29 +61,24 @@
       text-align: center;
       line-height: 32px;
       font-size: 12px;
+      transition: 0.3s;
     }
 
     .seatavailable.booked {
       background: #ccc;
       border: 2px solid #ccc;
-      cursor: not-allowed;}
-
-      .seatavailable.available {
-      background: white;
-      color: #000;
+      cursor: not-allowed;
     }
+
+    .seatavailable.available { background: white; color: #000; }
 
     .seatavailable.selected {
       background: #28a745;
       color: #fff;
     }
-    .legend {
-      margin-top: 20px;
-    }
-    .legend span {
-      display: inline-block;
-      margin: 0 10px;
-    }
+
+    .legend { margin-top: 20px; }
+    .legend span { display: inline-block; margin: 0 10px; }
     .legend .box {
       width: 20px;
       height: 20px;
@@ -96,18 +87,66 @@
       border-radius: 3px;
       border: 1px solid #444;
     }
-    .set-box { background: white; }
+    .available-box { background: white; }
     .selected-box { background: #4CAF50; }
     .sold-box { background: #aaa; }
-  
+
+    #pay-section {
+      display: none;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      width: 70%;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .payment-option {
+      margin: 10px 0;
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: 0.3s;
+      text-align: left;
+    }
+
+    .payment-option:hover { background: #f0f0f0; }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 25px;
+      border: none;
+      background-color: #f39c12;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover { background-color: #e67e22; }
+
+    #selectedCount {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Movie Seat Booking</h1>
 
-  <!-- EXECUTIVE SECTION -->
-  <div class="category">₹490 Recliner</div>
+  <!-- Example Section -->
+ <div class="category">₹490 Recliner</div>
    <div class="divider"></div>
 
   <div class="row">
@@ -316,22 +355,53 @@
     <div class="seatavailable booked">O16</div><div class="seatavailable">O17</div>
   </div>
 </div>
+  <br>
+  <p id="selectedCount">Selected Seats: 0</p>
+
+  <!-- Payment Section -->
+  <div id="pay-section">
+    <h2>Choose Payment Method</h2>
+    <div class="payment-option">💳 Credit / Debit Card</div>
+    <div class="payment-option">📱 UPI (PhonePe / Google Pay)</div>
+    <div class="payment-option">🏦 Net Banking</div>
+    <div class="payment-option">💵 Cash at Counter</div>
+    <button onclick="confirmPayment()">Confirm Payment</button>
+  </div>
+
   <div class="screen">SCREEN</div>
 
-<div class="legend">
+  <div class="legend">
     <span><span class="box available-box"></span> Available</span>
     <span><span class="box selected-box"></span> Selected</span>
     <span><span class="box sold-box"></span> Sold</span>
   </div>
 
   <script>
-    const seats = document.querySelectorAll('.seatavailable');
-    seats.forEach(seat=> {
+    const seats = document.querySelectorAll('.seatavailable:not(.booked)');
+    const selectedCount = document.getElementById('selectedCount');
+    const paySection = document.getElementById('pay-section');
+
+    seats.forEach(seat => {
       seat.addEventListener('click', () => {
         seat.classList.toggle('selected');
+
+        const selectedSeats = document.querySelectorAll('.seatavailable.selected').length;
+        selectedCount.textContent = `Selected Seats: ${selectedSeats}`;
+
+        // Show payment section if seat selected
+        if (selectedSeats > 0) {
+          paySection.style.display = 'block';
+          window.scrollTo({ top: paySection.offsetTop, behavior: 'smoot' });
+        } else {
+          paySection.style.display = 'none';
+        }
       });
     });
-  </script>
 
+    function confirmPayment() {
+      alert('✅ Payment Successful! Enjoy your movie 🍿');
+      location.reload();
+    }
+  </script>
 </body>
 </html>
