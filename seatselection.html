@@ -145,8 +145,14 @@
    
     }
      .payment-option:hover {
-      background:yellow;
+      background: #007bff;
     }
+     .payment-option.selected {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+
 
   </style>
 </head>
@@ -366,8 +372,7 @@
 </div>
 
   <p id="selectedCount">Selected Seats: 0</p>
-
-  <!-- Popup Payment Section -->
+ <footer>
   <div class="popup" id="popup">
     <div class="popup-content">
       <h2>Choose Payment Method</h2>
@@ -376,13 +381,22 @@
       <div class="payment-option">🏦 Net Banking</div>
       <div class="payment-option">💵 Cash at Counter</div>
       <button id="confirmPayment">Confirm Payment</button>
-
-      <br><br>
-     
     </div>
   </div>
+</footer>
+<script>
+    const options = document.querySelectorAll('.payment-option');
 
-  <script>
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        // remove previous selection
+        options.forEach(o => o.classList.remove('selected'));
+        // add selection to clicked one
+        option.classList.add('selected');
+      });
+    });
+  
+
     const seats = document.querySelectorAll('.seatavailable:not(.booked)');
     const popup = document.getElementById('popup');
     const selectedCount = document.getElementById('selectedCount');
