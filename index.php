@@ -4,53 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BookNow - Movies</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  
   <link rel="stylesheet" href="style22.css">
   <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="headerfooter.css">
 
-</head>
-<body>
-  <header class=" bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-10;">  
- 
-
-  <div class="navbar">
-    <h1>🎬 Book Now</h1>
-
-    <div class="profile">
-      <img src="userimg.png" alt="Profile" class="profilePic" id="profilePic" />
-      <div class="dropdown" id="dropdownMenu">
-    
-           <ul>
-             <li><a href="index.php">Home</a></li>
-            <li><a href="newmovie.html">New Movie</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-              <li><a href="login.php">logout</a></li>
-          </ul>
-     
-      </div>
-    </div>
-  </div>
-
-  </header>
-   <script>
-    const profilePic = document.getElementById('profilePic');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-
-    profilePic.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('show');
-    });
-
-    // Close dropdown when clicking outside
-    window.addEventListener('click', (e) => {
-      if (!profilePic.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove('show');
-      }
-    });
-  </script>
-
-
-  <style>
+<style>
    
 .moviereleasedate {
   background-color: #000;
@@ -145,8 +104,49 @@
   color: white;
 
 }
+ </style>
+</head>
+<body>
+  <header class=" bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-10;">  
+ 
 
-  </style>
+  <div class="navbar">
+    <h1>🎬 Book Now</h1>
+
+    <div class="profile">
+      <img src="userimg.png" alt="Profile" class="profilePic" id="profilePic" />
+      <div class="dropdown" id="dropdownMenu">
+    
+           <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="login.php">logout</a></li>
+          </ul>
+     
+      </div>
+    </div>
+  </div>
+
+  </header>
+   <script>
+    const profilePic = document.getElementById('profilePic');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profilePic.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', (e) => {
+      if (!profilePic.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+  </script>
+
+
+
+
   <!-- upcoming movies--> 
    <div class="headofupcomingmovie">
       <h1>Upcoming Movies</h1>

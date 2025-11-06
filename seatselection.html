@@ -139,6 +139,15 @@
       font-weight: bold;
       font-size: 16px;
     }
+    .popup{
+      display: none;
+      margin-left: 45%;
+   
+    }
+     .payment-option:hover {
+      background:yellow;
+    }
+
   </style>
 </head>
 <body>
@@ -355,53 +364,55 @@
     <div class="seatavailable booked">O16</div><div class="seatavailable">O17</div>
   </div>
 </div>
-  <br>
+
   <p id="selectedCount">Selected Seats: 0</p>
 
-  <!-- Payment Section -->
-  <div id="pay-section">
-    <h2>Choose Payment Method</h2>
-    <div class="payment-option">💳 Credit / Debit Card</div>
-    <div class="payment-option">📱 UPI (PhonePe / Google Pay)</div>
-    <div class="payment-option">🏦 Net Banking</div>
-    <div class="payment-option">💵 Cash at Counter</div>
-    <button onclick="confirmPayment()">Confirm Payment</button>
-  </div>
+  <!-- Popup Payment Section -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Choose Payment Method</h2>
+      <div class="payment-option">💳 Credit / Debit Card</div>
+      <div class="payment-option">📱 UPI (PhonePe / Google Pay)</div>
+      <div class="payment-option">🏦 Net Banking</div>
+      <div class="payment-option">💵 Cash at Counter</div>
+      <button id="confirmPayment">Confirm Payment</button>
 
-  <div class="screen">SCREEN</div>
-
-  <div class="legend">
-    <span><span class="box available-box"></span> Available</span>
-    <span><span class="box selected-box"></span> Selected</span>
-    <span><span class="box sold-box"></span> Sold</span>
+      <br><br>
+     
+    </div>
   </div>
 
   <script>
     const seats = document.querySelectorAll('.seatavailable:not(.booked)');
+    const popup = document.getElementById('popup');
     const selectedCount = document.getElementById('selectedCount');
-    const paySection = document.getElementById('pay-section');
+    const confirmButton = document.getElementById('confirmPayment');
+    
 
     seats.forEach(seat => {
       seat.addEventListener('click', () => {
         seat.classList.toggle('selected');
-
         const selectedSeats = document.querySelectorAll('.seatavailable.selected').length;
         selectedCount.textContent = `Selected Seats: ${selectedSeats}`;
 
-        // Show payment section if seat selected
+        // Show popup only if at least one seat is selected
         if (selectedSeats > 0) {
-          paySection.style.display = 'block';
-          window.scrollTo({ top: paySection.offsetTop, behavior: 'smoot' });
+          popup.style.display = 'flex';
         } else {
-          paySection.style.display = 'none';
+          popup.style.display = 'none';
         }
       });
     });
 
-    function confirmPayment() {
+   
+    // Confirm payment
+    confirmButton.addEventListener('click', () => {
       alert('✅ Payment Successful! Enjoy your movie 🍿');
       location.reload();
-    }
+    });
   </script>
+
+  
+ 
 </body>
 </html>
