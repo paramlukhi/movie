@@ -61,6 +61,7 @@
       background-color: black;
     }
 
+    
     /* Responsive */
     @media (max-width: 600px) {
       .navbar {
@@ -80,6 +81,8 @@
       width: 55%;
       height: 45px;
     }
+
+
 /* Footer CSS */
  .about-us {
     background: #222;
@@ -125,7 +128,7 @@
 
   .footer-section h3 {
     margin-bottom: 15px;
-    color: #f39c12; /* Highlight color */
+    color: #f39c12; 
   }
 
   .footer-section a {

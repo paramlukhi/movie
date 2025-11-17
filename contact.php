@@ -1,8 +1,12 @@
 
 <?php
-include 'connection.php';
+include 'Connection.php';
 session_start();
+ 
+
+$result = mysqli_query($conn, "SELECT * FROM contact_us");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,29 +25,24 @@ body{
     <input type="text" name="name" required placeholder="Your Name">
     <input type="email" name="email" required placeholder="Your Email">
     <textarea name="message" required placeholder="Your Message"></textarea>
-    <button type="submit">Send</button>
+    <button type="submit" name="sand">Send</button>
   </form>
 </body>
 </html>
 
 <?php
-include 'db.php';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if(isset($_POST["sand"])){
     $name    = $_POST['name'];
     $email   = $_POST['email'];
     $message = $_POST['message'];
 
-    try {
-        $sql = "INSERT INTO contacts (name, email, message) VALUES (:name, :email, :message)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':message', $message);
-        $stmt->execute();
-
+    $sql = "INSERT INTO contact_us (name, email, message) VALUES ('$name', '$email', '$message')";
+    $re= mysqli_query($conn,$sql);
+  if($re){
         echo "✅ Message sent successfully!";
-    } catch(PDOException $e) {
-        echo "❌ Error: " . $e->getMessage();
+        echo "<script> window.location='index.php'</script>";
+      
+    } else {
+        echo "data not inserted";
     }
 }

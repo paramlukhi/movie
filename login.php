@@ -10,22 +10,6 @@ session_start();
   <title>Login - BookNow</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style22.css">
-  
-  <script>
-    // document.addEventListener("DOMContentLoaded", function ()) {
-    //   const form = document.querySelector("form");
-
-    //   form.addEventListener("submit", function (event)) {
-    //     const email = form.email.value.trim();
-    //     const password = form.password.value.trim();
-
-    //     if (email === "" || password === "") {
-    //       alert("Please fill in both email and password.");
-    //       event.preventDefault(); 
-    //     }
-    //   };
-    // };
-  </script>
 
 </head>
 <body>
@@ -55,12 +39,16 @@ session_start();
         echo "valid user";
         echo "<script> window.location='index.php'</script>";
       }
-    }
+    
     else{
       echo "invalid user";
     }
   }
+}
   ?>
+  
+
+  
 </body>
 </html>
 
