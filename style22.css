@@ -1,0 +1,67 @@
+
+ .movie-card{
+  width: 220px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+}
+
+
+.movie-card:hover {
+  transform: translateY(-50px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+.movie-card2:hover {
+  transform: translateY(-50px);
+  box-shadow: 0 6px 16px rgba(251, 189, 2, 0.873);
+}
+
+.movie-poster,.movie-poster2{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.movie-rating,.movie-rating2 {
+  background-color: #000;
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.star,.star2{
+  color: red;
+  font-size: 16px;
+}
+
+.votes,.votes2{
+  color: #ccc;
+  font-size: 12px;
+}
+
+.movie-title,.movie-title2{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0.5rem 0 0 0.5rem;
+  color: #333;
+}
+
+.movie-type,.movie-type2{
+  font-size: 14px;
+  margin: 0.2rem 0 1rem 0.5rem;
+  color: #777;
+}
+
+
+
